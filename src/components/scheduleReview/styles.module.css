@@ -1,0 +1,65 @@
+.scheduleReview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("../../assets/background_section7.png") no-repeat center
+    center;
+  background-size: cover;
+  padding: 2rem 6rem 4rem 6rem;
+  img {
+    width: 350px;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 1));
+  }
+  .containerInfo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    h1 {
+      font-size: 50px;
+      color: var(--yellow);
+      line-height: normal;
+      width: 50%;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    }
+    p {
+      font-size: 25px;
+      color: var(--white);
+      line-height: normal;
+      width: 50%;
+    }
+    buttom {
+      font-size: 25px;
+      margin-top: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .scheduleReview {
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    img {
+      width: 250px;
+    }
+    .containerInfo {
+      width: 100%;
+      h1 {
+        font-size: 30px;
+        color: var(--yellow);
+        line-height: normal;
+        width: 100%;
+      }
+      p {
+        font-size: 15px;
+        width: 100%;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+      }
+    }
+  }
+}
