@@ -75,28 +75,35 @@
   right: 20px;
 }
 
-.gridServices > span:first-child {
+.gridServices>span:first-child {
   background: url(../../assets/background_card1_section2.png) no-repeat center center;
 }
-.gridServices > span:nth-child(2) {
+
+.gridServices>span:nth-child(2) {
   background: url(../../assets/background_card2_section2.png) no-repeat center center;
 }
-.gridServices > span:nth-child(3) {
+
+.gridServices>span:nth-child(3) {
   background: url(../../assets/background_card3_section2.png) no-repeat center center;
 }
-.gridServices > span:nth-child(4) {
+
+.gridServices>span:nth-child(4) {
   background: url(../../assets/background_card4_section2.png) no-repeat center center;
 }
-.gridServices > span:nth-child(5) {
+
+.gridServices>span:nth-child(5) {
   background: url(../../assets/background_card5_section2.png) no-repeat center center;
 }
-.gridServices > span:nth-child(6) {
+
+.gridServices>span:nth-child(6) {
   background: url(../../assets/background_card6_section2.png) no-repeat center center;
 }
-.gridServices > span:nth-child(7) {
+
+.gridServices>span:nth-child(7) {
   background: url(../../assets/background_card7_section2.png) no-repeat center center;
 }
-.gridServices > span:last-child {
+
+.gridServices>span:last-child {
   background: url(../../assets/background_card8_section2.png) no-repeat center center;
 }
 
@@ -105,23 +112,35 @@
   .ourServices {
     padding: 2rem 1rem;
   }
-  
+
   .ourServices h1 {
     font-size: 35px;
   }
-  
+
   .ourServices p {
     font-size: 16px;
     width: 90%;
   }
-  
+
   .gridServices {
     width: 100%;
     gap: 1rem;
   }
-  
+
   .gridServices span {
     width: 150px;
     height: 150px;
+  }
+
+  .gridServices span>h3 {
+    font-size: 14px;
+  }
+
+  .gridServices span>small {
+    font-size: 8px;
+  }
+
+  .gridServices span>a {
+    font-size: 10px;
   }
 }
