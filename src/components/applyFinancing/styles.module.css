@@ -6,6 +6,7 @@
   gap: 1rem;
   padding: 4rem 6rem;
   background: var(--white);
+
   .applyFinancingText {
     display: flex;
     flex-direction: column;
@@ -13,17 +14,21 @@
     justify-content: center;
     gap: 2.5rem;
     width: 50%;
+
     p {
       color: var(--gray);
-      line-height: normal;
+      line-height: 1;
       font-size: 25px;
     }
+
     h2 {
       font-size: 50px;
       color: var(--black);
-      line-height: normal;
+      line-height: 1;
+      font-family: var(--TitilliumWeb);
     }
   }
+
   .applyFinancingImgs {
     display: flex;
     flex-wrap: wrap;
@@ -32,6 +37,7 @@
     margin-top: 1rem;
     width: 50%;
     gap: 4rem;
+
     img {
       width: 200px;
     }
@@ -39,27 +45,42 @@
 }
 
 /*Responsive*/
+@media only screen and (min-width: 1919px) and (max-width: 2560px) {
+  .applyFinancing {
+    .applyFinancingImgs {
+      img {
+        width: 250px;
+      }
+    }
+  }
+}
+
 @media (max-width: 480px) {
   .applyFinancing {
     padding: 20px;
     flex-direction: column;
     width: 100vw;
+
     .applyFinancingText {
       width: 100%;
       gap: 1rem;
+
       h2 {
         font-size: 30px;
         color: var(--black);
         line-height: 1;
       }
+
       p {
         line-height: 1;
         font-size: 15px;
       }
     }
+
     .applyFinancingImgs {
       width: 100%;
       gap: 1rem;
+
       img {
         width: calc(50% - 1rem);
       }

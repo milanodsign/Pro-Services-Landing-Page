@@ -6,9 +6,6 @@ const OurServices = () => {
   const data = [
     {
       title: "Revisión general gratuita",
-      description:
-        "Chequeamos frenos, suspensión, niveles de líquidos y sistema motriz sin costo. Te entregamos un informe detallado",
-      img: hand,
       link: "https://wa.me/17542079013",
     },
     {
@@ -49,18 +46,22 @@ const OurServices = () => {
       </p>
       <div className={styles.gridServices}>
         {data.map((item, i) => (
-          <span key={i}>
-            <h3>{item.title}</h3>
-            {item.description && <small>{item.description}</small>}
-            <a
-              href={item.link}
-              className="btnYellow"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Agendar Cita
-            </a>
-            {item.description && <img src={hand} alt="hand" />}
+          <span key={i} className={styles.serviceCard}>
+            <div className={styles.cardContent}>
+              <h3>{item.title}</h3>
+              <div className={styles.hoverContent}>
+                {item.description && <small>{item.description}</small>}
+                <a
+                  href={item.link}
+                  className="btnYellow"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Agendar Cita
+                </a>
+                {item.description && <img src={hand} alt="hand" />}
+              </div>
+            </div>
           </span>
         ))}
       </div>

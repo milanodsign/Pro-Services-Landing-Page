@@ -12,21 +12,26 @@
   position: relative;
   padding: 4rem 6rem;
   gap: 2rem;
+
   h1 {
     font-size: 70px;
     color: var(--black);
     width: 50%;
-    line-height: normal;
+    line-height: 1;
+    font-family: var(--TitilliumWeb);
   }
+
   p {
-    font-size: 25px;
+    font-size: 30px;
     color: var(--black);
     width: 50%;
-    line-height: normal;
+    line-height: 1;
   }
+
   button {
     font-size: 25px;
   }
+
   .graphicResource {
     position: absolute;
     bottom: 50px;
@@ -42,17 +47,21 @@
     flex-direction: column;
     width: 100vw;
     height: 70vh;
+
     h1 {
       font-size: 30px;
       width: 100%;
     }
+
     p {
       font-size: 15px;
       width: 100%;
     }
+
     button {
       font-size: 15px;
     }
+
     .graphicResource {
       width: 30px;
       bottom: 30px;

@@ -14,13 +14,16 @@
 .promoBanner {
   background: var(--black);
   width: 100vw;
-  padding: 1rem 0;
+  height: 65px;
   position: sticky;
   top: 0;
   left: 0;
   z-index: 1001;
   transition: all 0.3s ease;
   transform: translateY(0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .promoBanner.bannerHidden {
@@ -34,9 +37,17 @@
   align-items: center;
   max-width: 100%;
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
+}
+
+.promoBanner>.container>div:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
 }
 
 .menuContainer {
@@ -56,19 +67,23 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  flex: 1;
+  height: 100%;
 }
 
-.infoTop > span:first-child {
+.infoTop>span:first-child {
   color: var(--yellow);
   font-weight: bold;
   font-size: 16px;
+  line-height: 1;
+  font-family: var(--Inter);
 }
 
-.infoTop > span:last-child {
+.infoTop>span:last-child {
   color: var(--white);
   font-weight: normal;
   font-size: 14px;
+  line-height: 1;
+  font-family: var(--OpenSans);
 }
 
 /* Countdown */
@@ -82,10 +97,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background: #f8f9fa;
-  padding: 0.5rem;
-  border-radius: 8px;
-  min-width: 50px;
+  border-radius: 4px;
+  min-width: 40px;
+  height: 50px;
 }
 
 .timeValue {
@@ -98,14 +114,14 @@
 .timeLabel {
   font-size: 0.75rem;
   color: #666;
-  margin-top: 0.25rem;
+  line-height: 1;
   font-weight: bold;
 }
 
 /* Header Menu */
 .headerMenu {
   position: fixed;
-  top: 96px;
+  top: 65px;
   left: 0;
   width: 100vw;
   background: transparent;
@@ -116,7 +132,7 @@
 
 .headerMenu.scrolled {
   top: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.3);
@@ -247,10 +263,11 @@
 
 /* >= 1280px (desktop grande) */
 @media (min-width: 1280px) {
+
   .container,
   .menuContainer {
-    max-width: 1200px;
-    padding: 0 1.5rem;
+    padding: 0 6rem;
+    width: 100%;
   }
 
   .logo img {
@@ -269,6 +286,7 @@
 
 /* 1024px–1279px (laptop / tablet landscape) */
 @media (max-width: 1279px) and (min-width: 1024px) {
+
   .container,
   .menuContainer {
     max-width: 100%;
@@ -299,6 +317,7 @@
 
 /* 768px–1023px (tablet) */
 @media (max-width: 1023px) and (min-width: 768px) {
+
   .container,
   .menuContainer {
     padding: 0 1rem;
@@ -307,7 +326,8 @@
 
   /* Header compactado un poco */
   .headerMenu {
-    top: 84px; /* banner + padding más pequeño en tablet */
+    top: 84px;
+    /* banner + padding más pequeño en tablet */
     padding: 0.75rem 0;
   }
 
@@ -323,6 +343,7 @@
   .menu {
     display: none;
   }
+
   .mobileMenuToggle {
     display: flex;
   }
@@ -332,10 +353,11 @@
     flex-wrap: wrap;
   }
 
-  .infoTop > span:first-child {
+  .infoTop>span:first-child {
     font-size: 15px;
   }
-  .infoTop > span:last-child {
+
+  .infoTop>span:last-child {
     font-size: 13px;
   }
 
@@ -361,7 +383,17 @@
 /* <= 767px (móvil) */
 @media (max-width: 767px) {
   .headerStyles {
-    margin-bottom: 56px; /* reduce espacio inferior en mobile */
+    margin-bottom: 56px;
+    /* reduce espacio inferior en mobile */
+  }
+
+  .promoBanner>.container>div:last-child>div>a:before {
+    content: '📞';
+    font-size: 15px;
+  }
+
+  .promoBanner>.container>div:last-child>div>a {
+    font-size: 0;
   }
 
   .promoBanner {
@@ -370,33 +402,40 @@
 
   /* Header pegado justo debajo del banner; más compacto */
   .headerMenu {
-    top: 132.02px; /* altura estimada del banner en móvil */
+    top: 65px;
+    /* altura estimada del banner en móvil */
     padding: 0.5rem 0;
   }
 
-  .promoBanner.bannerHidden + .headerMenu,
+  .promoBanner.bannerHidden+.headerMenu,
   .headerMenu.scrolled {
-    top: 0; /* cuando ocultas el banner o hay scroll, el header sube */
+    top: 0;
+    /* cuando ocultas el banner o hay scroll, el header sube */
   }
 
   .container {
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   .container,
   .menuContainer {
     padding: 0 0.75rem;
-    gap: 0.75rem;
+    gap: 0.65rem;
   }
 
-  .container > div:nth-child(1) {
-    width: 100%;
-    display: contents;
+  .container>div:nth-child(1) {
+    width: 150px;
+    display: flex;
     line-height: 1;
   }
 
-  .container > div:nth-child(2),
-  .container > div:nth-child(3) {
+  .promoBanner>.container>div:last-child {
+    gap: .75rem;
+    width: calc(100% - 150px);
+  }
+
+  .container>div:nth-child(2),
+  .container>div:nth-child(3) {
     width: calc(50% - 0.5rem);
     justify-content: center;
     align-items: center;
@@ -412,6 +451,7 @@
   .menu {
     display: none;
   }
+
   .mobileMenuToggle {
     display: flex;
   }
@@ -421,18 +461,13 @@
     flex-direction: row;
   }
 
-  .infoTop {
-    flex: 1;
-  }
-
-  .infoTop > span:first-child {
-    font-size: 14px;
+  .infoTop>span:first-child {
+    font-size: 12px;
     line-height: 1.1;
   }
 
-  .infoTop > span:last-child {
-    font-size: 12px;
-    opacity: 0.9;
+  .infoTop>span:last-child {
+    display: none;
   }
 
   /* Countdown en 2 columnas si hay espacio limitado */
@@ -440,7 +475,7 @@
     width: 100%;
     justify-content: flex-start;
     gap: 0.5rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
   .timeContainer {
@@ -483,12 +518,13 @@
   }
 
   .timeContainer {
-    min-width: 40px;
+    min-width: 30px;
   }
 }
 
 /* Accesibilidad: si el usuario prefiere reducir movimiento */
 @media (prefers-reduced-motion: reduce) {
+
   .promoBanner,
   .headerMenu,
   .menu a,

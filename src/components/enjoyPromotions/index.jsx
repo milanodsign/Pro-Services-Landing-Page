@@ -6,6 +6,13 @@ const EnjoyPromotions = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = 3;
 
+  // Array de imágenes para el slider (puedes agregar más imágenes)
+  const sliderImages = [
+    bannerMarquesina,
+    bannerMarquesina, // Puedes cambiar por otras imágenes
+    bannerMarquesina, // Puedes cambiar por otras imágenes
+  ];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % totalSlides);
@@ -34,11 +41,18 @@ const EnjoyPromotions = () => {
       <div className={styles.containerBanner}>
         <div className={styles.slider}>
           <div className={styles.sliderContainer}>
-            <img
-              src={bannerMarquesina}
-              alt="Promoción"
-              className={styles.sliderImage}
-            />
+            {sliderImages.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Promoción ${index + 1}`}
+                className={`${styles.sliderImage} ${
+                  currentSlide === index
+                    ? styles.activeImage
+                    : styles.inactiveImage
+                }`}
+              />
+            ))}
           </div>
           <div className={styles.sliderDots}>
             {[...Array(totalSlides)].map((_, index) => (

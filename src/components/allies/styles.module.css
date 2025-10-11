@@ -6,6 +6,11 @@
   flex-direction: column;
   gap: 4rem;
   padding: 4rem 6rem;
+
+  h1 {
+    font-family: var(--TitilliumWeb);
+  }
+
   .gallery {
     display: flex;
     justify-content: space-between;
@@ -13,8 +18,28 @@
     flex-wrap: wrap;
     gap: 2rem;
     width: 100%;
+
     img {
       width: 150px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1919px) and (max-width: 2560px) {
+  .allies {
+    padding: 6rem;
+
+    h1 {
+      font-size: 70px;
+    }
+
+    .gallery {
+      gap: 4rem;
+      justify-content: center;
+
+      img {
+        width: 230px;
+      }
     }
   }
 }
@@ -23,9 +48,15 @@
   .allies {
     padding: 20px;
     width: 100vw;
+
     .gallery {
       justify-content: center;
-      width: 100vw;
+      width: calc(100vw - 4rem);
+      gap: 4rem;
+
+      img {
+        width: 130px;
+      }
     }
   }
 }

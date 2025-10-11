@@ -6,11 +6,12 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #000;
   width: 100vw;
   height: 100vh;
   padding: 0 6rem;
   position: relative;
-  padding-top: 160px; /* Espacio para banner + header */
+  /* Espacio para banner + header */
 }
 
 .hero img {
@@ -21,28 +22,39 @@
   transform: translateY(-50%);
 }
 
-.hero > div {
+.hero>div {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   gap: 2rem;
-  width: 50%;
+  width: 40%;
   z-index: 2;
 }
 
-.hero > div h1 {
-  font-size: 50px;
+.hero>div h1 {
+  font-size: 65px;
   color: var(--white);
-  line-height: 1.2;
+  line-height: 1;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: var(--TitilliumWeb);
 }
 
-.hero > div p {
+.hero>div p {
   font-size: 25px;
   color: var(--white);
   line-height: 1.4;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero>div a {
+  font-size: 16px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 40px;
 }
 
 /* Responsive Design */
@@ -51,15 +63,15 @@
     padding: 140px 4rem 0;
   }
 
-  .hero > div {
+  .hero>div {
     width: 60%;
   }
 
-  .hero > div h1 {
+  .hero>div h1 {
     font-size: 42px;
   }
 
-  .hero > div p {
+  .hero>div p {
     font-size: 22px;
   }
 
@@ -74,15 +86,15 @@
     height: 80vh;
   }
 
-  .hero > div {
+  .hero>div {
     width: 70%;
   }
 
-  .hero > div h1 {
+  .hero>div h1 {
     font-size: 36px;
   }
 
-  .hero > div p {
+  .hero>div p {
     font-size: 20px;
   }
 
@@ -100,17 +112,17 @@
     flex-direction: column;
   }
 
-  .hero > div {
+  .hero>div {
     width: 100%;
     align-items: center;
   }
 
-  .hero > div h1 {
+  .hero>div h1 {
     font-size: 28px;
     text-align: center;
   }
 
-  .hero > div p {
+  .hero>div p {
     font-size: 16px;
     text-align: center;
   }
@@ -130,11 +142,11 @@
     height: 60vh;
   }
 
-  .hero > div h1 {
+  .hero>div h1 {
     font-size: 24px;
   }
 
-  .hero > div p {
+  .hero>div p {
     font-size: 14px;
   }
 

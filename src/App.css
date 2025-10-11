@@ -12,7 +12,8 @@ html {
 
 /* Estilos para las secciones */
 section {
-  scroll-margin-top: 120px; /* Compensa la altura del header fixed */
+  scroll-margin-top: 120px;
+  /* Compensa la altura del header fixed */
 }
 
 /* Reset margins and paddings */
@@ -93,8 +94,23 @@ a.btnYellow {
   text-align: center;
   font-size: 14px;
 }
+
 button.btnYellow:hover,
 a.btnYellow:hover {
   background-color: #f4c430;
   color: #000000;
+}
+
+@media only screen and (min-width: 1919px) {
+
+  button.btnYellow,
+  a.btnYellow {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    height: 45px;
+    padding: 0 2rem;
+  }
 }

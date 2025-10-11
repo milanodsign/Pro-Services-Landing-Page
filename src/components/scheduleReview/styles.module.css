@@ -5,33 +5,38 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background: url("../../assets/background_section7.png") no-repeat center
-    center;
+  background: url("../../assets/background_section7.png") no-repeat center center;
   background-size: cover;
-  padding: 2rem 6rem 4rem 6rem;
+  padding: 2rem 6rem 6rem 6rem;
+
   img {
     width: 350px;
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 1));
   }
+
   .containerInfo {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     gap: 1rem;
+
     h1 {
       font-size: 50px;
       color: var(--yellow);
-      line-height: normal;
+      line-height: 1;
       width: 50%;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+      font-family: var(--TitilliumWeb);
     }
+
     p {
       font-size: 25px;
       color: var(--white);
-      line-height: normal;
-      width: 50%;
+      line-height: 1;
+      width: 60%;
     }
+
     buttom {
       font-size: 25px;
       margin-top: 2rem;
@@ -39,25 +44,86 @@
   }
 }
 
+@media only screen and (min-width: 1919px) and (max-width: 2560px) {
+  .scheduleReview {
+    padding: 6rem;
+    align-items: flex-start;
+
+    img {
+      width: 650px;
+      margin: 0 auto;
+    }
+
+    .containerInfo {
+      gap: 1.5rem;
+
+      h1 {
+        font-size: 80px;
+      }
+
+      p {
+        font-size: 30px;
+        width: 60%;
+      }
+
+      buttom {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1365pxpx) {
+  .scheduleReview {
+    padding: 4rem;
+
+    img {
+      width: 300px;
+    }
+
+    .containerInfo {
+      h1 {
+        font-size: 60px;
+        width: 60%;
+      }
+
+      p {
+        font-size: 20px;
+        width: 70%;
+      }
+
+      buttom {
+        font-size: 20px;
+      }
+    }
+  }
+
+}
+
 @media screen and (max-width: 768px) {
   .scheduleReview {
-    padding: 20px;
+    padding: 2rem 2rem 3rem;
     width: 100vw;
-    height: 100vh;
+    height: auto;
+
     img {
-      width: 250px;
+      width: 200px;
+      margin: 2rem 0 10rem;
     }
+
     .containerInfo {
       width: 100%;
+
       h1 {
         font-size: 30px;
         color: var(--yellow);
-        line-height: normal;
+        line-height: 1;
         width: 100%;
       }
+
       p {
-        font-size: 15px;
-        width: 100%;
+        font-size: 12px;
+        width: 80%;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
       }
     }
